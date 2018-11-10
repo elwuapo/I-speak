@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pagweb',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'Ispeak.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ypszeapv',
+        'USER': 'ypszeapv',
+        'PASSWORD': 'hQJ_BYeGV2jPfdZv39dUuKeHNNtFtiz5',
+        'HOST': 'elmer.db.elephantsql.com',
+        'PORT': '5432',
     }
 }
 
