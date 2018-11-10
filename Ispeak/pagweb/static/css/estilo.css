@@ -1,0 +1,216 @@
+.content{
+    margin-bottom: 30px;
+}
+
+
+
+.logo{
+ display: inline-block;
+ margin-top: 20px;
+ transition: all 0.3s ease 0s;
+}
+
+header.sticky {
+    background: rgb(63, 74, 102) none repeat scroll 0 0;
+    position: fixed;
+    z-index: 1;
+  
+}
+
+.sticky .main-menu ul li a{
+    padding: 10px 20px;
+    color:rgb(231, 231, 231);
+    margin-bottom: 1;
+    margin-top: 3px;   
+}
+
+
+.sticky .main-menu ul{
+    margin: 0;
+}
+.sticky .main-menu ul li a:hover{
+    background: rgb(60, 85, 112)none repeat scroll 0 0;
+    transition: all 0.5s;
+}
+
+
+.sticky .logo {
+    
+    color:#fff;
+}
+
+
+
+.main-menu ul li{
+ display: inline-block;
+ list-style: none;
+
+}
+
+.chile {
+    background: rgb(255, 255, 255);
+}
+.chile p{
+ margin:10px;
+}
+.chile h2{
+    margin:10px;
+}
+
+
+.haiti {
+    background: rgb(255, 255, 255);
+}
+.haiti p{
+ margin:10px;
+}
+.haiti h2{
+    margin:10px;
+}
+
+
+
+
+.main-menu ul li a{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    padding: 30px 20px;
+    display: block;
+}
+
+header {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+.single-slider{
+    height: 100vh;
+    margin-left:0;
+    margin-right: 0;
+    background-image:url(img/back2.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+  
+}
+
+footer{
+    background-color:rgba(46, 66, 88);
+    text-align: center;
+    color:#fff;
+    margin: 0;
+    padding: 4;
+}
+
+.mapa {
+    margin:10px;
+    background: rgba(247, 247, 247);
+    margin: 1px;
+    
+}
+
+.mapagoogle {
+    float: left;
+    margin: 20px;
+}
+.contenido {
+    float: right;
+    margin: 20px;
+
+}
+body{
+    background: rgb(255, 255, 255);
+}
+
+.bordesolido {
+
+    border-width: 5px;
+    border-style: groove;
+    margin: 3px;
+    border-color: rgb(240, 235, 235)
+}
+
+.borde-suave {
+    border-width: 5px;
+    border-color: rgb(228, 228, 228);
+    border-style: solid;
+}
+
+.borde-se2 {
+    border-width: 3px;
+    border-color: rgb(212, 212, 212);
+    border-style: dotted;
+}
+
+.noticias{
+    margin-top: 50px;
+    
+}
+
+.imagenes{
+    margin: 10px;
+}
+
+.noticiaS{
+    margin: 20px;
+    flex-direction: column;
+}
+ 
+.noticia1 {
+    margin: 10px;
+    padding: 6;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.contacto{
+    background-color: gray;
+    margin: 50px;
+}
+.boot{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Diccionario*/
+
+#formulario {
+    background: gray;
+    margin: 0%;
+    padding: 0%;
+    height: 400px;
+}
+
+.traductor {
+    width: 100%;
+    padding-left: 20%;
+    overflow: hidden;
+}
+
+.botom {
+    padding-top: 32px;
+    float: left;
+    padding-left: 5%;
+}
+
+.botoom{
+    padding: 10px;
+}
+.textoo{
+    float: left;
+    width: 50%;
+}
+
+.peque{
+    width: 60%;
+    padding-left: 20%;
+    
+}
+
+.traducido{
+    width: 100%;
+
+}

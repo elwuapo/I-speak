@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}" />
+    <title>I-Speak</title>
+</head>
+
+<body>
+    
+   <header id="sticky-header">
+       <div class="main-menu-area">
+           <div class="container">
+               <div class="row">
+                   <div class="col-xs-12 col-sm-1 col-md-3">
+                    <div class="logo">
+                        <a href="index.html"><img src="../static/img/logo.png" height="30" alt ="" ></a>
+                    </div>
+                   </div>
+                   <div class="col-xs-12 col-sm-9 col-md-9">
+                       <div class="main-menu text-right">
+                           <nav>
+                               <ul>
+                                    <li><a href="Diccionario.html">Diccionario</a></li>
+                                    <li><a href="noticias.html">Noticias</a></li>
+                                    <li><a href="contactos.html">Contacto</a></li>
+                               </ul>
+                           </nav>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </header>
+    <div class="slider-area">
+        <div class="single-slider" style="background-image:url(../static/img/back2.jpg)"></div>
+    </div>
+    <br>
+    <div class="content">
+        <div class="container borde-suave">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="chile">
+                     <h2> Chilenismos </h2>
+                        <p>A pata pela  -></p>
+                        <p>No pasa na  -></p>
+                        <p>Carnet o Carne  -></p>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                    <div class="haiti">
+                      <h2> Equivalente en creole  </h2>
+                      <p> Barefoot  </p>
+                      <p> Pa gen anyen k ap pase  </p>
+                      <p> Idantite kat</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+            <div class="mapa borde-se2 ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="mapagoogle">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d106514.68539467127!2d-70.65190438761981!3d-33.46014523237742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMunicipalidad!5e0!3m2!1ses-419!2scl!4v1539555252543" 
+                                        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                               
+                            </div>
+                            <div class="col-md-5">
+                                    <div class="contenido ">
+                                        <p> En este mapa podras encontrar la ubicación de las municipalidades
+                                         de Santiago, en las municipalidades podras encontrar toda la ayuda
+                                         que necesites, asi tambien te podran ayudar a encontrar trabajo y contactarte con la comunidad
+                                         de tu pais.</p>
+                                    </div>
+                            </div>
+            
+            
+                            
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <div class="noticias container">
+            <h2> Noticias</h2>
+        <div class="container">
+            <div class="row">
+                
+             <div class="noticiaS borde-suave">
+                    
+                <div class="col-md-12">
+                    <h4> Venezolanos se convierten en la comunidad de inmigrantes más grande de Chile</h4>
+                    <br>
+                    <a href="noticia1.html"><img class="imagenes"  src="../static/img/not-venezuela.jpg"></a>
+                    <br>
+                 </div>
+                </div>
+                <br>
+                <div class="noticiaS borde-suave">
+                    <div class="col-md-12">
+                        <h4>“Nos quitan trabajo”: 7 mitos de la inmigración en Chile</h4>
+                        <br>
+                        <a href="noticia2.html"><img class="imagenes" src="../static/img/not-trabajo.jpg"></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+   <footer> Mobile and web design - IT Fair 
+       <p> Free material for everyone </p>
+   </footer>
+
+
+   <footer></footer>
+   <!-- Scripts -->
+   <script src="../static/js/jquery-3.3.1.js"></script>
+   <script src="../static/js/bootstrap.min.js"></script>
+   <script src="../static/js/app.js"></script>
+
+</body>
+</html>

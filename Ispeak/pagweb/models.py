@@ -7,3 +7,5 @@ class Diccionario(models.Model):
     portuges = models.CharField(max_length = 50)
     creolles = models.CharField(max_length = 50)
     ingles = models.CharField(max_length = 50)
+
+
