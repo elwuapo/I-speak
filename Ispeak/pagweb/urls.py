@@ -6,6 +6,8 @@ from django.conf import settings
 urlpatterns = [
     path('', views.index, name="index"),
     path('login',views.login, name="login"),
+    path('login/iniciar',views.login_iniciar, name="iniciar"),
+    path('cerrarsession',views.cerrar_session, name="cerrar_session"),
     path('diccionario/', views.diccionario, name= "diccionario"),
     path('diccionario/traducido/', views.traducido, name= "traducido"),
     path('diccionario/modificar/', views.modificar, name= "modificar"),

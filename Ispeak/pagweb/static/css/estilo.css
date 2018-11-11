@@ -207,3 +207,8 @@ body{
   margin-left: 40%;
   float: center;
 }
+
+.contenedor{
+    display: block;
+    margin-top: 100%;
+}

@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, logout, login as auth_login
 from .models import Diccionario
 # Create your views here.
 
@@ -36,16 +38,19 @@ def modificar(request):
     return render(request, 'modificar.html',{'palabra':palabra})
 
 def login_iniciar(request):
-    correo = request.POST.get('nombre_usuario', '')
-    contrasenia = request.POST.get('contrasenia', '')
-    persona = Persona.objects.filter(correo=correo).filter(contrasenia=contrasenia)
-    print(persona)
-    if persona is not None:
-        request.session['usuario'] = persona[0].nombre
-        request.session['id'] = persona[0].id
-        return redirect('index')
+    username = request.POST.get('nombre_usuario', '')
+    password = request.POST.get('contrasenia', '')
+    user = authenticate(request, username = username ,password = password)
+    print(user)
+    if user is not None:
+       auth_login(request, user)
+       return redirect('index')
     else:
-        return HttpResponse('No existe')
+        return HttpResponse('No existe html')
+
+def cerrar_session(request):
+    del request.session['usuario']
+    return redirect('index')
 
 def traducido(request):
     español = request.POST.get('traducirEspañol','vacio')
@@ -75,7 +80,7 @@ def modificarPalabra(request):
     portuges = request.POST.get('modificarPortuges','vacio')
     ingles = request.POST.get('modificarIngles', 'vacio')
     creolles = request.POST.get('modificarCreolles', 'vacio')
-    
+
     try:
         palabra = Diccionario.objects.get(español = español)
 
