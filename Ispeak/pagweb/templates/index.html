@@ -39,6 +39,44 @@
           </div>
       </div>
   </header>
+
+  {% if user.is_staff %}
+    <br>
+    <h6>  bienvenido {{user}} </h6>
+    <br>
+    <div class="container">
+        <br>
+        <br>
+        <h2>Crear Post</h2>
+        <div class="row">
+
+            <div class="col-xs-12  col-md-4" id="registropost">
+                <form action="{% url "crearPost" %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                    <br>
+                    <label for="encabezado"> Titulo </label>
+                    <input type="text" id="encabezado" name="encabezado" class="form-control" placeholder="Ingrese el titulo de la noticia" required>
+                    <br>
+                    <br>
+                    <label for="foto">Fotogafia representativa:</label>
+                    <input type="file" name="foto" id="foto" required>
+                    <br>
+                    <label for="titulo"> Cuerpo </label>
+                    <input type="text" id="cuerpo" name="cuerpo" class="form-control" placeholder="..." required>
+                    <br>
+                    <button type="submit" class="btn btn-success btn-lg btn-block"> Publicar </button>
+                    <br>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-area">
+        <div class="single-slider" style="background-image:url(../static/img/back2.jpg)"></div>
+    </div>
+
+    {% endif %}
     <section class="sec1"></section>
     <br>
     <div class="content">
@@ -84,39 +122,29 @@
                                          de tu pais.</p>
                                     </div>
                             </div>
-
-
-
-
-                            </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
+              </div>
+    </div>
     </div>
 
     <div class="noticias container">
             <h2> Noticias</h2>
         <div class="container">
             <div class="row">
-
+              {% for elemento in posts %}
              <div class="noticiaS borde-suave">
 
                 <div class="col-md-12">
-                    <h4> Venezolanos se convierten en la comunidad de inmigrantes más grande de Chile</h4>
+                    <h4>{{elemento.encabezado}} </h4>
                     <br>
-                    <a href="noticia1.html"><img class="imagenes"  src="../static/img/not-venezuela.jpg"></a>
+                    <img src="media/{{elemento.foto}}" alt="no foto">
                     <br>
+                    <p> {{elemento.cuerpo}} </p>
                  </div>
+                 <br>
                 </div>
-                <br>
-                <div class="noticiaS borde-suave">
-                    <div class="col-md-12">
-                        <h4>“Nos quitan trabajo”: 7 mitos de la inmigración en Chile</h4>
-                        <br>
-                        <a href="noticia2.html"><img class="imagenes" src="../static/img/not-trabajo.jpg"></a>
-                    </div>
-                </div>
-
+                {% endfor %}
             </div>
         </div>
     </div>

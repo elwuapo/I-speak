@@ -2,13 +2,13 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, logout, login as auth_login
-from .models import Diccionario
+from .models import Diccionario, Publicacion
 # Create your views here.
 
 
 def index(request): #Cargar index
     usuario = request.session.get('usuario',None)
-    return render(request,'index.html',{})
+    return render(request,'index.html',{'posts':Publicacion.objects.all()})
 
 def login(request):
     return render(request, 'login.html',{}) #Mostrar login
@@ -49,7 +49,7 @@ def login_iniciar(request):
         return HttpResponse('No existe html')
 
 def cerrar_session(request):
-    del request.session['usuario']
+    logout(request)
     return redirect('index')
 
 def traducido(request):
@@ -102,3 +102,11 @@ def eliminarPalabra(request):
         return redirect('diccionario')
     except:
         return HttpResponse('Error! no se puedo eliminar la palabra')
+
+def crearPublicacion(request):
+    encabezado = request.POST.get('encabezado','')
+    foto = request.FILES.get('foto', False)
+    cuerpo = request.POST.get('cuerpo', '')
+    post = Publicacion(encabezado = encabezado, foto = foto, cuerpo = cuerpo)
+    post.save()
+    return redirect('index')

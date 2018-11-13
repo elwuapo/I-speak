@@ -7,3 +7,8 @@ class Diccionario(models.Model):
     portuges = models.CharField(max_length = 50)
     creolles = models.CharField(max_length = 50)
     ingles = models.CharField(max_length = 50)
+
+class Publicacion(models.Model):
+    encabezado = models.CharField(max_length = 60)
+    foto = models.ImageField(upload_to = 'foto/')
+    cuerpo = models.TextField()

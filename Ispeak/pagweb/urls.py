@@ -14,5 +14,6 @@ urlpatterns = [
     path('diccionario/modificar/agregado/', views.agregarPalabra, name= "agregarPalabra"),
     path('diccionario/modificar/modificado/', views.modificarPalabra, name= "modificarPalabra"),
     path('diccionario/modificar/eliminado/', views.eliminarPalabra, name= "eliminarPalabra"),
+    path('crearPost', views.crearPublicacion, name="crearPost")
 
-]
+]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
