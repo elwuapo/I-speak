@@ -30,9 +30,9 @@
         {% csrf_token %}
             <div class="txtd">
                 <label for="exampleInputEmail1">Español</label>
-                <input type="text" id="enEspañol" placeholder="Escribe..." value = "{{palabra.español}}" name="traducirEspañol">
+                <input type="text" id="enEspañol" style="color:black" placeholder="Escribe..." value = "{{palabra.español}}" name="traducirEspañol">
             </div>
-            <div> 
+            <div>
                 <input type="submit" class="diccion-botn" value="Traducir">
             </div>
             <div class="txtd">
@@ -56,10 +56,10 @@
         {% csrf_token %}
         <div class="txtd">
            <label for="text">ingrese palabra a buscar para modificar:</label>
-           <input type="text" name = "buscarEspañol">
+           <input type="text" placeholder="Buscar..." name = "buscarEspañol">
         </div>
 
-        <div> 
+        <div>
            <input type="submit" class="diccion-botn" value="Buscar">
         </div>
        </form>

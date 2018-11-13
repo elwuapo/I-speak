@@ -169,20 +169,27 @@ body{
 
 /*Diccionario*/
 
-
-.container-diccion{
-padding: 5%;
+.traductor{
+  background-image: url(../img/lenguajes.png);
+  background-attachment: fixed;
+  background-size: cover;
 
 }
 
+
+.container-diccion{
+padding: 5%;
+}
+
 .diccion{
-    background-color: rgb(197, 194, 194);
+    background-color:rgba(174, 182, 191, .9);
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 10px;
 }
+
 .txtd{
     border:1px solid black;
     margin: 8px 0;
@@ -192,7 +199,7 @@ padding: 5%;
 .txtd label{
     display: block;
     text-align: left;
-    color: black;
+    color: white;
     text-transform: uppercase;
     font-size: 14px;
 }
@@ -203,9 +210,9 @@ padding: 5%;
     outline: none;
     font-size: 18px;
     margin-top: 6px;
-    background: white;
-    border-radius: 5px;
+    color:white;
 }
+
 .diccion-botn{
     display: inline-block;
     background: rgb(63, 74, 102);
@@ -300,8 +307,9 @@ padding: 5%;
 }
 
 .cont-agrega{
+
     text-align: center;
-    background-color: gray;
+    background-color:rgba(174, 182, 191, .9);
     max-width: 800px;
     margin: 10px  auto;
     padding: 2rem;
@@ -340,15 +348,17 @@ padding: 5%;
 }
 
 .modi{
-    padding: 5%;
+    padding: 7%;
 }
 
 .cont-modi{
+    background-color:rgba(174, 182, 191, .9);
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 10px;
+    box-shadow: 0 0 20px #000000b3;
 
 }
 .txtb2{
@@ -371,6 +381,7 @@ padding: 5%;
     outline: none;
     font-size: 18px;
     margin-top: 6px;
+    color:white;
 }
 
 
@@ -387,7 +398,7 @@ padding: 5%;
 }
 
 .cont-elim{
-    background-color: gray;
+    background-color:rgba(174, 182, 191, .9);
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
@@ -418,6 +429,7 @@ padding: 5%;
     outline: none;
     font-size: 18px;
     margin-top: 6px;
+    color:white;
 }
 
 
@@ -458,7 +470,7 @@ padding: 5%;
 .nav-conta ul{
     display: flex;
     margin: 0;
-    padding:0 100px; 
+    padding:0 100px;
     float: right;
 }
 
@@ -562,7 +574,7 @@ padding: 5%;
 .nav-noti ul{
     display: flex;
     margin: 0;
-    padding:0 100px; 
+    padding:0 100px;
     float: right;
 }
 
