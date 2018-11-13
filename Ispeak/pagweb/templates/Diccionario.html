@@ -7,82 +7,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/estilo.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}" />
     <title>Diccionario</title>
 </head>
 
 <body>
-    <header id="sticky-header">
-        <div class="main-menu-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-1 col-md-3">
-                        <div class="logo">
-                            <a href="index.html"><img src="../static/img/logo.png" height="30" alt ="" ></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-9 col-md-9">
-                        <div class="main-menu text-right">
-                            <nav>
-                                <ul>
-                                    <li><a href="Diccionario.html">Diccionario</a></li>
-                                    <li><a href="noticias.html">Noticias</a></li>
-                                    <li><a href="contactos.html">Contacto</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="slider-area">
-        <div class="single-slider" style="background-image:url(../static/img/back2.jpg)"></div>
-    </div>
+        <header class="img-bar"><img src="../static/img/logo.png"></header>
+        <nav class="nav-conta">
+            <ul>
+                <li><a href="Diccionario.html">Diccionario</a></li>
+                <li><a href="noticia1.html">Noticias</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+           </ul>
+        </nav>
+        <section class="sec1"></section>
 
 
 <div class="traductor">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
+  <div class="container-diccion">
+    <div class="diccion">
        <form action="traducido/" method="post" id="formulario">
-         {% csrf_token %}
-         <div class="form-group">
-             <label for="exampleInputEmail1">Español</label>
-             <input type="text" class="form-control" id="enEspañol" placeholder="Escribe..." value = "{{palabra.español}}" name="traducirEspañol">
-         </div>
-         <div class="form-group">
-             <label for="exampleInputEmail1">Criollo Haitiano</label>
-             <input type="text" class="form-control" id="enHaitiano" placeholder="Traduccion..." value = "{{palabra.creolles}}" name="traducirCreolles">
-         </div>
+        {% csrf_token %}
+            <div class="txtd">
+                <label for="exampleInputEmail1">Español</label>
+                <input type="text" id="enEspañol" placeholder="Escribe..." value = "{{palabra.español}}" name="traducirEspañol">
+            </div>
+            <div> 
+                <input type="submit" class="diccion-botn" value="Traducir">
+            </div>
+            <div class="txtd">
+                <label for="exampleInputEmail1">Criollo Haitiano</label>
+                <input type="text" id="enHaitiano" placeholder="Traduccion..." value = "{{palabra.creolles}}" name="traducirCreolles">
+            </div>
 
-         <div class="form-group">
-             <label for="exampleInputEmail1">Inglés</label>
-             <input type="text" class="form-control" id="enIngles" placeholder="Traduccion..." value = "{{palabra.ingles}}" name="traducirIngles">
-         </div>
+            <div class="txtd">
+                <label for="exampleInputEmail1">Inglés</label>
+                <input type="text" id="enIngles" placeholder="Traduccion..." value = "{{palabra.ingles}}" name="traducirIngles">
+            </div>
 
-         <div class="form-group">
-             <label for="exampleInputEmail1">Portugues</label>
-             <input type="text" class="form-control" id="enPortugues" placeholder="Traduccion..." value = "{{palabra.portuges}}" name="traducirPortugues">
-         </div>
-
-         <div>
-           <input type="submit" value="Traducir">
-         </div>
-       </form>
+            <div class="txtd">
+                <label for="exampleInputEmail1">Portugues</label>
+                <input type="text"  id="enPortugues" placeholder="Traduccion..." value = "{{palabra.portuges}}" name="traducirPortugues">
+            </div>
+        </form>
 
        {% if request.user.is_superuser %}
        <form action="modificar/" method="post">
-         {% csrf_token %}
-         <div>
+        {% csrf_token %}
+        <div class="txtd">
            <label for="text">ingrese palabra a buscar para modificar:</label>
            <input type="text" name = "buscarEspañol">
-         </div>
+        </div>
 
-         <div>
-           <input type="submit" value="Buscar">
-         </div>
-
+        <div> 
+           <input type="submit" class="diccion-botn" value="Buscar">
+        </div>
        </form>
        {% endif%}
 

@@ -11,21 +11,20 @@
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}" />
     <title>login</title>
 </head>
-<body class="body-login" style="background-image:url(../static/img/login.jpg)">
-
+<body class="body-login" style="background-image:url(../static/img/loginn.jpg)">
     <div class="contact-login">
         <form method="POST" role="form" action="{% url "iniciar" %}">
             {% csrf_token %}
             <h1>Iniciar Sesión</h1>
             <div class="txtb">
                 <label for="inputEmail">Nombre:</label>
-                <input type="text" name="nombre_usuario" placeholder="Nombre..." required autofocus>
+                <input type="text" id="inputEmail" name="nombre_usuario" placeholder="Nombre..." required autofocus>
             </div>
             <div class="txtb">
                 <label for="inputPassword">Contraseña</label>
-                <input type="password" name="contrasenia:" placeholder="Contraseña..." required>
+                <input type="password" id="inputPassword" name="contrasenia:" placeholder="Contraseña..." required>
             </div>
-            <button class="login-botn" type="submit">Iniciar Sesión</button>
+            <button class="image-botn" type="submit">Iniciar Sesión</button>
         </form>
     </div>
 </body>

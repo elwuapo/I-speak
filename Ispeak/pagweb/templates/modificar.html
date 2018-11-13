@@ -5,77 +5,94 @@
     {% load static %}
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/estilo.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}" />
     <title>Modificar</title>
   </head>
 
-  <body>
-    <div class="container">
-      <h1>FORMULARIO PARA AGREGAR UNA PALABRA NUEVA</h1>
-      <form action="agregado/" method="post" id="formulario">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="exampleInputEmail1">Español</label>
-            <input type="text" class="form-control" id="enEspañol" placeholder="Escribe..." value = "{{palabra.español}}" name="agregarEspañol">
+  <body class="modi-body">
+    <div class="container1">
+      <div class="agre">
+        <div class="cont-agrega" >
+          <form action="agregado/" method="post" >
+            <h1>FORMULARIO PARA AGREGAR UNA PALABRA NUEVA</h1>
+            {% csrf_token %}
+              <div class="txtb1">
+                <label for="exampleInputEmail1">Español</label>
+                <input type="text" id="enEspañol" placeholder="Escribe..." value = "{{palabra.español}}" name="agregarEspañol">
+              </div>
+              <div class="txtb1">
+                <label for="exampleInputEmail1">Criollo Haitiano</label>
+                <input type="text" id="enHaitiano" placeholder="Traduccion..." value = "{{palabra.creolles}}" name="agregarCreolles">
+              </div>
+      
+              <div class="txtb1">
+                <label for="exampleInputEmail1">Inglés</label>
+                <input type="text" id="enIngles" placeholder="Traduccion..." value = "{{palabra.ingles}}" name="agregarIngles">
+              </div>
+        
+              <div class="txtb1">
+                <label for="exampleInputEmail1">Portugues</label>
+                <input type="text"  id="enPortugues" placeholder="Traduccion..." value = "{{palabra.portuges}}" name="agregarPortuges">
+              </div>
+        
+              <div>
+                <input type="submit" class="btn-modi" value="Agregar">
+              </div>
+          </form>
         </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Criollo Haitiano</label>
-            <input type="text" class="form-control" id="enHaitiano" placeholder="Traduccion..." value = "{{palabra.creolles}}" name="agregarCreolles">
-        </div>
-
-        <div class="form-group">
-            <label for="exampleInputEmail1">Inglés</label>
-            <input type="text" class="form-control" id="enIngles" placeholder="Traduccion..." value = "{{palabra.ingles}}" name="agregarIngles">
-        </div>
-
-        <div class="form-group">
-            <label for="exampleInputEmail1">Portugues</label>
-            <input type="text" class="form-control" id="enPortugues" placeholder="Traduccion..." value = "{{palabra.portuges}}" name="agregarPortuges">
-        </div>
-
-        <div>
-          <input type="submit" value="Agregar">
-        </div>
-      </form>
-      <h1>FORMULARIO PARA MODIFICAR UNA PALABRA</h1>
-      <form action="modificado/" method="post" id="formulario">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="exampleInputEmail1">Español</label>
-            <input type="text" class="form-control" id="enEspañol" placeholder="Escribe..." value = "{{palabra.español}}" name="modificarEspañol">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Criollo Haitiano</label>
-            <input type="text" class="form-control" id="enHaitiano" placeholder="Traduccion..." value = "{{palabra.creolles}}" name="modificarCreolles">
-        </div>
-
-        <div class="form-group">
-            <label for="exampleInputEmail1">Inglés</label>
-            <input type="text" class="form-control" id="enIngles" placeholder="Traduccion..." value = "{{palabra.ingles}}" name="modificarIngles">
-        </div>
-
-        <div class="form-group">
-            <label for="exampleInputEmail1">Portugues</label>
-            <input type="text" class="form-control" id="enPortugues" placeholder="Traduccion..." value = "{{palabra.portuges}}" name="modificarPortuges">
-        </div>
-
-        <div>
-          <input type="submit" value="Modificar">
-        </div>
-      </form>
-      <h1>FORMULARIO PARA ELIMINAR UNA PALABRA</h1>
-      <form action="eliminado/" method="post" id="formulario">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="exampleInputEmail1">Español</label>
-            <input type="text" class="form-control" id="enEspañol" placeholder="Escribe..." value = "{{palabra.español}}" name="eliminarEspañol">
-        </div>
-
-        <div>
-          <input type="submit" value="Eliminar">
-        </div>
-      </form>
+      </div>
     </div>
+    <div class="container2">
+      <div class="modi">
+        <div class="cont-modi">
+          <h1>FORMULARIO PARA MODIFICAR UNA PALABRA</h1>
+          <form action="modificado/" method="post" id="formulario">
+            {% csrf_token %}
+              <div class="txtb2">
+                <label for="exampleInputEmail1">Español</label>
+                <input type="text" class="form-control" id="enEspañol" placeholder="Escribe..." value = "{{palabra.español}}" name="modificarEspañol">
+              </div>
+              <div class="txtb2">
+                <label for="exampleInputEmail1">Criollo Haitiano</label>
+                <input type="text" class="form-control" id="enHaitiano" placeholder="Traduccion..." value = "{{palabra.creolles}}" name="modificarCreolles">
+              </div>
+        
+              <div class="txtb2">
+                <label for="exampleInputEmail1">Inglés</label>
+                <input type="text" class="form-control" id="enIngles" placeholder="Traduccion..." value = "{{palabra.ingles}}" name="modificarIngles">
+              </div>
+        
+              <div class="txtb2">
+                <label for="exampleInputEmail1">Portugues</label>
+                <input type="text" class="form-control" id="enPortugues" placeholder="Traduccion..." value = "{{palabra.portuges}}" name="modificarPortuges">
+              </div>
+        
+              <div>
+                <input type="submit" class="btn-modi" value="Modificar">
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container3">
+      <div class="elim">
+        <div class="cont-elim">
+          <h1>FORMULARIO PARA ELIMINAR UNA PALABRA</h1>
+          <form action="eliminado/" method="post" id="formulario">
+            {% csrf_token %}
+              <div class="txtb3">
+                  <label for="exampleInputEmail1">Español</label>
+                  <input type="text" class="form-control" id="enEspañol" placeholder="Escribe..." value = "{{palabra.español}}" name="eliminarEspañol">
+              </div>
+        
+              <div>
+                <input type="submit" class="btn-modi" value="Eliminar">
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footin">holi</footer>
 
   </body>
 </html>

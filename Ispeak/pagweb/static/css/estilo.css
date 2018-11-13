@@ -166,52 +166,58 @@ body{
     text-align: justify;
 }
 
-.contacto{
-    background-color: gray;
-    margin: 50px;
-}
-.boot{
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /*Diccionario*/
-.traductor {
 
-    margin: 30px;
-    margin-left: 30%;
+
+.container-diccion{
+padding: 5%;
+
 }
 
-.botom {
-    padding-top: 32px;
-    float: left;
-    padding-left: 5%;
+.diccion{
+    background-color: rgb(197, 194, 194);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
 }
-
-.botoom{
-    padding: 10px;
+.txtd{
+    border:1px solid black;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
 }
-.textoo{
-    float: left;
-    width: 50%;
+.txtd label{
+    display: block;
+    text-align: left;
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
 }
-
-
-.traducido{
+.txtd input,.txtd textarea{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    margin-top: 6px;
+    background: white;
+    border-radius: 5px;
+}
+.diccion-botn{
+    display: inline-block;
+    background: rgb(63, 74, 102);
+    padding: 14px 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
     width: 100%;
 
 }
 
-.botonFormulario{
-  margin-left: 40%;
-  float: center;
-}
-
-.contenedor{
-    display: block;
-    margin-top: 100%;
-}
 
 /* login*/
 
@@ -261,7 +267,7 @@ body{
     font-size: 18px;
     margin-top: 6px;
 }
-.login-botn{
+.image-botn{
     display: inline-block;
     background: rgb(63, 74, 102);
     padding: 14px 0;
@@ -271,4 +277,316 @@ body{
     margin-top: 8px;
     width: 100%;
 
+}
+
+
+/* Modificar*/
+.modi-body{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container1{
+    height:100hv;
+    background-image: url(../img/not-trabajo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0%
+}
+
+.agre{
+    padding: 10%;
+}
+
+.cont-agrega{
+    text-align: center;
+    background-color: gray;
+    max-width: 800px;
+    margin: 10px  auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000000b3;
+}
+
+.txtb1{
+    border:1px solid black;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+.txtb1 label{
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.txtb1 input,.txtb1 textarea{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    margin-top: 6px;
+    color: white;
+}
+
+.container2{
+    height: 100hv;
+    width: 100%;
+    background-color: #333;
+    background-size: cover;
+    margin: 0;
+}
+
+.modi{
+    padding: 5%;
+}
+
+.cont-modi{
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+
+}
+.txtb2{
+    border:1px solid black;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+.txtb2 label{
+    display: block;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.txtb2 input,.txtb2 textarea{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+
+.container3{
+    height: 100hv;
+    width: 100%;
+    background-image: url(../img/not-venezuela.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.elim{
+    padding: 20%;
+}
+
+.cont-elim{
+    background-color: gray;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000000b3;
+    color: white;
+}
+
+
+.txtb3{
+    border:1px solid black;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+.txtb3 label{
+    display: block;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.txtb3 input,.txtb3 textarea{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+
+.footin{
+    margin: 0%;
+}
+
+.btn-modi{
+    display: inline-block;
+    background: rgb(63, 74, 102);
+    padding: 14px 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+}
+
+/* Contactos*/
+
+.img-bar{
+    padding: 10px 100px;
+    box-sizing: border-box;
+}
+
+.nav-conta{
+    width: 100%;
+    height: 50px;
+    background: rgba(63, 74, 102,.2);
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    position: sticky;
+    top:0px;
+
+
+}
+
+.nav-conta ul{
+    display: flex;
+    margin: 0;
+    padding:0 100px; 
+    float: right;
+}
+
+.nav-conta ul li{
+    list-style: none;
+}
+
+.nav-conta ul li a{
+    display: block;
+    color: black;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px;
+}
+.nav-conta ul li a:hover{
+    background: #333;
+}
+
+.sec1{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/back2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contacto{
+    background-color: gray;
+    margin: 50px;
+}
+.boot{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container1{
+    height:100hv;
+    background-image: url(../img/not-trabajo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0%
+}
+
+.contact{
+    padding: 5%;
+}
+
+.contactos{
+    text-align: center;
+    background-color: gray;
+    max-width: 800px;
+    margin: 10px  auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000000b3;
+}
+
+.textx{
+    border:1px solid black;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+.textx label{
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.textx input,.textx textarea{
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+    margin-top: 6px;
+    color: black;
+}
+
+
+
+.img-bar{
+    padding: 10px 100px;
+    box-sizing: border-box;
+}
+
+.nav-noti{
+    width: 100%;
+    height: 50px;
+    background: rgba(63, 74, 102,.2);
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    position: sticky;
+    top:0px;
+
+
+}
+
+.nav-noti ul{
+    display: flex;
+    margin: 0;
+    padding:0 100px; 
+    float: right;
+}
+
+.nav-noti ul li{
+    list-style: none;
+}
+
+.nav-noti ul li a{
+    display: block;
+    color: black;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px;
+}
+.nav-noti ul li a:hover{
+    background: #333;
+}
+
+.sec2{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/world-map.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
